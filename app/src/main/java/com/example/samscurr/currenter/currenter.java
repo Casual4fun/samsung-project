@@ -13,10 +13,11 @@ import java.net.URL;
 
 public class currenter
 {
+    final String strURL = "https://api.exchangerate.host/latest";
+
     public String getCurrencyInfo(String vallet) throws IOException {
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
         StrictMode.setThreadPolicy(policy);
-        final String strURL = "https://api.exchangerate.host/latest";
         InputStreamReader inputStreamReader = null;
         BufferedReader bufferedReader = null;
         URL url = new URL(strURL);
